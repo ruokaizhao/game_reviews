@@ -47,5 +47,8 @@ reviews = {
   "Roblox": ["So much fun!", "So many great players!"]
 }
 
+games.each do |game|
+  Game.create(name: game, company: companies[:game], price: prices[:game], introduction: introductions[:game, img: imgs[:game]])
+end
 
 puts "✅ Done seeding!"
