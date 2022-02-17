@@ -4,7 +4,7 @@ puts "🌱 Seeding spices..."
 
 games = ["Call of Duty", "Resident Evil Village", "Battlefield 2042", "Marvel's Spider-Man: Miles Morales", "Far Cry 6", "NBA 2K22", "Fortnite", "Minecraft", "Grand Theft Auto V", "Roblox"]
 
-price = {"Call of Duty": 53, "Resident Evil Village": 60, "Battlefield 2042": 45, "Marvel's Spider-Man: Miles Morales": 30, "Far Cry 6": 30, "NBA 2K22": 20, "Fortnite": 30, "Minecraft": 20, "Grand Theft Auto V": 24, "Roblox": 10}
+prices = {"Call of Duty": 53, "Resident Evil Village": 60, "Battlefield 2042": 45, "Marvel's Spider-Man: Miles Morales": 30, "Far Cry 6": 30, "NBA 2K22": 20, "Fortnite": 30, "Minecraft": 20, "Grand Theft Auto V": 24, "Roblox": 10}
 
 introductions = {
   "Call of Duty": "Not one, but two Call of Duty titles top the list of bestsellers for 2021: Call of Duty: Vanguard and Call of Duty: Black Ops: Cold War. Both are fast-paced, first-person shooters, only the first takes place in the run-up to World War II, while the second explores the Cold War of the '80s.",
@@ -33,5 +33,19 @@ imgs = {
   "Grand Theft Auto V": "https://m.media-amazon.com/images/I/61+s8HfeFoL.jpg", 
   "Roblox": "https://m.media-amazon.com/images/I/71SfFWK2AUL._SL1465_.jpg"
 }
+
+reviews = {
+  "Call of Duty": ["I like Call of duty!", "I like shooting!", "GOGOGO!"], 
+  "Resident Evil Village": ["Exciting!", "Resident Evil is back!", "Horror Games are the best!", "This scares me, but in a good way..."],
+  "Battlefield 2042": ["Fight with your friends!", "SHOOT!", "Battle with various weapons!", "Fire in the hole!"], 
+  "Marvel's Spider-Man: Miles Morales": ["Superhero!", "I'm Spider-man!"], 
+  "Far Cry 6": ["Great graphics!", "Wonderful storyline!"], 
+  "NBA 2K22": ["Sports!", "I like basketball!"], 
+  "Fortnite": ["Survive!", "Buddies, let's kick some asses!", "Fortnite is the best!", "Best game ever!"], 
+  "Minecraft": ["Creation!", "I can do everything with it!"], 
+  "Grand Theft Auto V": ["Open world games are the best", "I can be anyone I want!", "I can choose to do anything I like!"], 
+  "Roblox": ["So much fun!", "So many great players!"]
+}
+
 
 puts "✅ Done seeding!"
