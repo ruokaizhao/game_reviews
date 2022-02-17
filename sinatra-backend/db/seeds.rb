@@ -51,4 +51,11 @@ games.each do |game|
   Game.create(name: game, company: companies[:game], price: prices[:game], introduction: introductions[:game, img: imgs[:game]])
 end
 
+5.times do
+  User.create(name: Faker::Name.name)
+end
+
+
+
+
 puts "✅ Done seeding!"
