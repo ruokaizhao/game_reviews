@@ -16,16 +16,21 @@ function Review({ review, userData, testUser, onDeleteReview, onEditReview }) {
     .then(() => onDeleteReview(review.id))
   }
 
+  function handleEditReview(updatedReview) {
+    onEditReview(updatedReview)
+    setIsEditing((isEditing) => !isEditing)
+  }
+
  
 
 
   return (
-    <li className="show-button">
+    <div className="show-button">
       <span>{user}</span>
       <span>{timeStamp}</span>
       {
         isEditing ?
-        <EditReview review={review.review} id={review.id} onEditReview={onEditReview} />
+        <EditReview review={review.review} id={review.id} onEditReview={handleEditReview} />
         : <p>{review.review}</p>
       }      
       {
@@ -41,7 +46,7 @@ function Review({ review, userData, testUser, onDeleteReview, onEditReview }) {
         
         : null
       }
-    </li>
+    </div>
   )
 
 

@@ -48,6 +48,7 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
         return review
       }
     })
+    setReviews(newReview)
   }
   
   return (

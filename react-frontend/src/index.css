@@ -55,7 +55,7 @@ form.new-message {
   cursor: pointer;
 } */
 
-li .actions {
+div .actions {
   position: relative;
   top: 0;
   transform: translateY(-50%);

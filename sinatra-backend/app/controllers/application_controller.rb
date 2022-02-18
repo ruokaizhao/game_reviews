@@ -31,4 +31,10 @@ class ApplicationController < Sinatra::Base
     review.to_json
   end
 
+  patch "/reviews/:id" do
+    review = Review.find(params[:id])
+    review.update(review: params[:review])
+    review.to_json
+  end
+
 end
