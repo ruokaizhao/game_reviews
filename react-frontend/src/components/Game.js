@@ -1,11 +1,10 @@
 import React from "react";
-import { Route, NavLink, useRouteMatch, useParams } from "react-router-dom";
+import { Route, NavLink } from "react-router-dom";
 import ReviewList from "./ReviewList"
 
 function Game(props) {
 
   const {name, price, company, introduction, img} = props.game
-  const match = useRouteMatch()
 
   return (
     <div>

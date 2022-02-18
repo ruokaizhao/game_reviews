@@ -4,12 +4,15 @@ import GameList from "./GameList";
 
 function App() {
   const [games, setGames] = useState([])
+  
 
   useEffect(() => {
     fetch("http://localhost:9292/")
     .then((r) => r.json())
     .then((games) => setGames(games))
   }, [])
+
+  
 
   return (
     <div>

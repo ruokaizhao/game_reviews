@@ -7,15 +7,15 @@ function GameList({ games }) {
 
   return (
     <div>
-      {games.map((game) => {
-        return (
-          <ul>
-            <li>
-              <Game key={game.id} game={game} />
-            </li>            
-          </ul>          
-        )
-      })}    
+      <ul>
+        {games.map((game) => {
+          return (          
+            <li key={game.id}>
+              <Game game={game} />
+            </li>                   
+          )         
+        })}  
+      </ul>  
     </div>
   )
 
