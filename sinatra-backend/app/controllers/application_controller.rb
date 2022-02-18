@@ -10,4 +10,9 @@ class ApplicationController < Sinatra::Base
     games.to_json
   end
 
+  get "/reviews/:gameid" do
+    reviews = Review.where(game_id: Game.find_by(name: params[:gameid]).id)
+    reviews.to_json
+  end
+
 end
