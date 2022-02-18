@@ -6,7 +6,13 @@ function Review({ review, userData, testUser, onDeleteReview }) {
 
   let isCurrentUser = testUser.name === user
 
-
+  function handleDeleteClick() {
+    fetch(`http://localhost:9292/reviews/${review.id}`, {
+      method: "DELETE"
+    })
+    .then((r) => r.json())
+    .then(() => onDeleteReview(review.id))
+  }
 
   return (
     <div>
