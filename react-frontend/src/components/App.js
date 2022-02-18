@@ -7,7 +7,7 @@ function App() {
   const [games, setGames] = useState([])
 
   useEffect(() => {
-    fetch("http://localhost:9292/games")
+    fetch("http://localhost:9292/")
     .then((r) => r.json())
     .then((games) => setGames(games))
   }, [])
@@ -16,11 +16,8 @@ function App() {
     <div>
       <NavBar />
       <Switch>
-        <Route path="/games">
+        <Route path="/">
           <GameList games={games} />
-        </Route>
-        <Route exact path="/">
-          <h1>Welcome!</h1>
         </Route>
       </Switch>      
     </div>
