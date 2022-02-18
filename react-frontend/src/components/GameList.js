@@ -9,9 +9,11 @@ function GameList({ games }) {
     <div>
       {games.map((game) => {
         return (
-          <>
-            <Game key={game.id} game={game} />
-          </>          
+          <ul>
+            <li>
+              <Game key={game.id} game={game} />
+            </li>            
+          </ul>          
         )
       })}    
     </div>

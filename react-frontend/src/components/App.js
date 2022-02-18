@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Route, Switch } from "react-router-dom";
 import GameList from "./GameList";
-import NavBar from "./NavBar"
 
 function App() {
   const [games, setGames] = useState([])
@@ -14,7 +13,6 @@ function App() {
 
   return (
     <div>
-      <NavBar />
       <Switch>
         <Route path="/">
           <GameList games={games} />
