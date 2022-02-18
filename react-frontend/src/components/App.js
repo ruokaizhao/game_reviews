@@ -4,7 +4,10 @@ import GameList from "./GameList";
 
 function App() {
   const [games, setGames] = useState([])
-
+  const testUser = {
+    user_id: 1,
+    name: "Walker Kohler"
+  }
   
 
   useEffect(() => {
