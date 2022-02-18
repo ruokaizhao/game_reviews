@@ -5,4 +5,17 @@ function NewReview({ game_id, testUser, onAddNewReview }) {
 
 
 
+
+  return (
+    <form className="new-message" onSubmit={handleSubmit}>
+        <textarea
+        name="review" 
+        value={newReview} 
+        onChange={(e) => setNewReview(e.target.value)}
+        rows="4" cols="50"/>        
+        <button type="submit">Add your review</button>
+    </form>
+  )
+}
+
 export default NewReview;
