@@ -1,17 +1,28 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 
 function Game(props) {
+  const[showReview, setShowReview] = useState(false)
 
   const {name, price, company, introduction, img} = props.game
 
   return (
     <div>
-      <h2>{name}</h2>
-      <img src={img} alt={name}/>
-      <h3>{company}</h3>
-      <h3>{price}</h3>
-      <h4>{introduction}</h4>
+      <div className="container">
+        <h2>{name}</h2>
+        <NavLink to="/"
+        <img className="image" src={img} alt={name}/>
+        <h3>From: {company}</h3>
+        <h4>Price: {price}</h4>
+      </div>
+      {
+        showReview ?
+        <Review />
+        : null
+      }
+
     </div>
+    
   )
 
 }
