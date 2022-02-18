@@ -15,4 +15,9 @@ class ApplicationController < Sinatra::Base
     reviews.to_json
   end
 
+  get "/users" do
+    users = User.all
+    users.to_json
+  end
+
 end
