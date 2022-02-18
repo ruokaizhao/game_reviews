@@ -4,7 +4,7 @@ import ReviewList from "./ReviewList"
 
 function Game(props) {
 
-  const {name, price, company, introduction, img} = props.game
+  const {game_id, name, price, company, introduction, img} = props.game
 
   return (
     <div>
@@ -14,7 +14,7 @@ function Game(props) {
       <h3>From: {company}</h3>
       <h4>Price: {price}</h4>
       <Route path={`/reviews/:gameId`}>
-        <ReviewList name={name} introduction={introduction} img={img}/>
+        <ReviewList name={name} introduction={introduction} img={img} game_id={game_id} testUser={props.testUser} />
       </Route>   
     </div>    
   )

@@ -3,7 +3,7 @@ import Game from "./Game"
 
 
 
-function GameList({ games }) {
+function GameList({ games, testUser }) {
 
   return (
     <div>
@@ -11,7 +11,7 @@ function GameList({ games }) {
         {games.map((game) => {
           return (          
             <li key={game.id}>
-              <Game game={game} />
+              <Game game={game} testUser={testUser} />
             </li>                   
           )         
         })}  

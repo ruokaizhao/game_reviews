@@ -4,6 +4,7 @@ import GameList from "./GameList";
 
 function App() {
   const [games, setGames] = useState([])
+
   
 
   useEffect(() => {
@@ -18,7 +19,7 @@ function App() {
     <div>
       <Switch>
         <Route path="/">
-          <GameList games={games} />
+          <GameList games={games} testUser={testUser}/>
         </Route>
       </Switch>      
     </div>

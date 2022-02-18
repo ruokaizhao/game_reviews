@@ -40,3 +40,8 @@ body {
 .container img {
   object-fit: contain;
 }
+
+form.new-message {
+  display: flex;
+  width: 75%;
+}

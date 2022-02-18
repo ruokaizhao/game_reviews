@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import NewReview from "./NewReview";
 import Review from "./Review"
 
-function ReviewList({ name, introduction, img }) {
+function ReviewList({ game_id, name, introduction, img, testUser}) {
   const params = useParams()
   const [reviews, setReviews] = useState([])
   const [users, setUsers] = useState([])
   const userData = {} 
-
 
   useEffect(() => {
     fetch("http://localhost:9292/users")
@@ -28,6 +28,10 @@ function ReviewList({ name, introduction, img }) {
   if (params.gameId !== name) {
     return null
   }
+
+  function handleAddReview(updatedReview) {
+    setReviews([...reviews, updatedReview])
+  }
   
   return (
     <div>
@@ -41,11 +45,10 @@ function ReviewList({ name, introduction, img }) {
             </li>            
           )          
         })}
-      </ul>     
-    </div>
-    
+      </ul>
+      <NewReview game_id={game_id} testUser={testUser} onAddNewReview={handleAddReview}/>     
+    </div>    
   )
-
 }
 
 export default ReviewList;
