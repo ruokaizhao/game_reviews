@@ -32,6 +32,8 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
   function handleAddReview(updatedReview) {
     setReviews([...reviews, updatedReview])
   }
+
+ 
   
   return (
     <div>
@@ -41,7 +43,7 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
         {reviews.map((review) => {
           return(
             <li key={review.id}>
-              <Review review={review} userData={userData}/>
+              <Review review={review} userData={userData} testUser={testUser} onDeleteReview={handleDeleteReview}/>
             </li>            
           )          
         })}

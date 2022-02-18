@@ -18,6 +18,7 @@ function NewReview({ game_id, testUser, onAddNewReview }) {
     })
     .then((r) => r.json())
     .then((updatedReview) => onAddNewReview(updatedReview))
+    .then(() => setNewReview(""))
   }
 
 

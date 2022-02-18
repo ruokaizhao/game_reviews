@@ -9,7 +9,7 @@ function GameList({ games, testUser }) {
     <div>
       <ul>
         {games.map((game) => {
-          return (          
+          return (        
             <li key={game.id}>
               <Game game={game} testUser={testUser} />
             </li>                   
