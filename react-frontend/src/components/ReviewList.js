@@ -39,6 +39,16 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
     })
     setReviews(newReviews)
   }
+
+  function handleEditReview(updatedReview) {
+    const newReview = reviews.map((review) => {
+      if (review.id === updatedReview.id) {
+        return updatedReview
+      } else {
+        return review
+      }
+    })
+  }
   
   return (
     <div>
@@ -48,7 +58,12 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
         {reviews.map((review) => {
           return(
             <li key={review.id}>
-              <Review review={review} userData={userData} testUser={testUser} onDeleteReview={handleDeleteReview}/>
+              <Review 
+              review={review} 
+              userData={userData} 
+              testUser={testUser} 
+              onDeleteReview={handleDeleteReview}
+              onEditReview={handleEditReview} />
             </li>            
           )          
         })}

@@ -1,8 +1,10 @@
 import React, { useState } from "react";
+import EditReview from "./EditReview";
 
-function Review({ review, userData, testUser, onDeleteReview }) {
+function Review({ review, userData, testUser, onDeleteReview, onEditReview }) {
   const timeStamp = new Date(review.created_at).toLocaleDateString()
   const user = userData[review.user_id]
+  const [isEditing, setIsEditing] = useState(false)
 
   let isCurrentUser = testUser.name === user
 
@@ -14,19 +16,32 @@ function Review({ review, userData, testUser, onDeleteReview }) {
     .then(() => onDeleteReview(review.id))
   }
 
+ 
+
+
   return (
-    <div>
+    <li className="show-button">
       <span>{user}</span>
       <span>{timeStamp}</span>
-      <p>{review.review}</p>
+      {
+        isEditing ?
+        <EditReview review={review.review} id={review.id} onEditReview={onEditReview} />
+        : <p>{review.review}</p>
+      }      
       {
         isCurrentUser ?
-        <button onClick={handleDeleteClick}>
-          Delete
-        </button>
+        <div className="actions">
+          <button onClick={handleDeleteClick}>
+            Delete
+          </button>
+          <button onClick={() => setIsEditing((isEditing) => !isEditing)}>
+            Edit
+          </button>
+        </div>
+        
         : null
       }
-    </div>
+    </li>
   )
 
 
