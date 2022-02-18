@@ -33,7 +33,12 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
     setReviews([...reviews, updatedReview])
   }
 
- 
+  function handleDeleteReview(reviewId) {
+    const newReviews = reviews.filter((review) => {
+      return review.id !== reviewId
+    })
+    setReviews(newReviews)
+  }
   
   return (
     <div>
