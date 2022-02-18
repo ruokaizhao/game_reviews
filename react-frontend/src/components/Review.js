@@ -5,7 +5,7 @@ function Review({ review, userData }) {
   const user = userData[review.user_id]
   return (
     <div>
-
+      <p>{timeStamp}</p>
       <p>{review.review}</p>      
     </div>
   )
