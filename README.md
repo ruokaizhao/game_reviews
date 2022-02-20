@@ -4,7 +4,7 @@ This is a full-stack project using React to build the frontend and Ruby with Sin
 
 The data used in this project is about various games and their respective user reviews.
 
-# Installation
+## Installation
 
 Fork and clone this repo, cd into the sinatra-backend fold and run:
 
@@ -43,6 +43,6 @@ On the bottom of this card like box is the input area for adding a new review fo
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-# License
+## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
