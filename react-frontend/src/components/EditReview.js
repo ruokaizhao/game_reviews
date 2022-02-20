@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 
-
 function EditReview({ review, id, onEditReview }) {
   const [editedReview, setEditedReview] = useState(review)
 
@@ -21,7 +20,7 @@ function EditReview({ review, id, onEditReview }) {
 
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="edit-message" onSubmit={handleSubmit}>
         <input
         type="text"
         name="edit"
@@ -34,8 +33,6 @@ function EditReview({ review, id, onEditReview }) {
       </form>
     </div>
   )
-
 }
-
 
 export default EditReview;

@@ -1,8 +1,6 @@
 import React from "react";
 import Game from "./Game"
 
-
-
 function GameList({ games, testUser }) {
 
   return (
@@ -18,8 +16,6 @@ function GameList({ games, testUser }) {
       </ul>  
     </div>
   )
-
-
 }
 
 export default GameList;

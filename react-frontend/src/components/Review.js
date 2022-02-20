@@ -16,47 +16,47 @@ function Review({ review, userData, testUser, onDeleteReview, onEditReview }) {
     .then(() => onDeleteReview(review.id))
   }
 
+  function handleComfirm() {
+    const userInput = window.prompt("please enter your name to confirm:")
+    if (userInput === testUser.name) {
+      handleDeleteClick()
+    } else if (userInput === null) {
+      return
+    } else handleComfirm()
+  }
+
   function handleEditReview(updatedReview) {
     onEditReview(updatedReview)
     setIsEditing((isEditing) => !isEditing)
   }
 
- 
-
-
   return (
     <div className="show-button">
-      <span>{user}</span>
-      <span>{timeStamp}</span>
+      <span className="user">{user}</span>
+      <span className="time">{timeStamp}</span>
       {
         isEditing ?
         <EditReview review={review.review} id={review.id} onEditReview={handleEditReview} />
-        : <p>{review.review}</p>
+        : <p className="review">{review.review}</p>
       }      
       {
         isCurrentUser ?
-        <div className="actions">
-          <button onClick={handleDeleteClick}>
-            Delete
-          </button>
+        <div className="actions">          
           <button onClick={() => setIsEditing((isEditing) => !isEditing)}>
-            Edit
+            <span role="img" aria-label="edit">
+              ✏️
+            </span>
           </button>
-        </div>
-        
+          <button onClick={handleComfirm}>
+            <span role="img" aria-label="delete">
+              🗑
+            </span>
+          </button>
+        </div>        
         : null
       }
     </div>
   )
-
-
-
-
-
-
-
-
-
 }
 
 export default Review;

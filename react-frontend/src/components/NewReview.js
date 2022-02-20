@@ -17,19 +17,19 @@ function NewReview({ game_id, testUser, onAddNewReview }) {
       })
     })
     .then((r) => r.json())
-    .then((updatedReview) => onAddNewReview(updatedReview))
+    .then((newReview) => onAddNewReview(newReview))
     .then(() => setNewReview(""))
   }
 
-
   return (
     <form className="new-message" onSubmit={handleSubmit}>
-        <textarea
+        <input
+        type="text"
         name="review" 
         value={newReview} 
         onChange={(e) => setNewReview(e.target.value)}
-        rows="4" cols="50"/>        
-        <button type="submit">Add your review</button>
+        />        
+        <button type="submit">Submit</button>
     </form>
   )
 }

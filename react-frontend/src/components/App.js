@@ -6,17 +6,15 @@ function App() {
   const [games, setGames] = useState([])
   const testUser = {
     user_id: 1,
-    name: "Walker Kohler"
-  }
-  
+    name: "Collene McClure"
+  }  
 
   useEffect(() => {
+    document.title = "Games and Reviews"
     fetch("http://localhost:9292/")
     .then((r) => r.json())
     .then((games) => setGames(games))
-  }, [])
-
-  
+  }, [])  
 
   return (
     <div>
@@ -25,11 +23,8 @@ function App() {
           <GameList games={games} testUser={testUser}/>
         </Route>
       </Switch>      
-    </div>
-    
+    </div>    
   )
-
-
 }
 
 export default App;

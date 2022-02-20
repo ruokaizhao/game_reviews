@@ -29,8 +29,8 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
     return null
   }
 
-  function handleAddReview(updatedReview) {
-    setReviews([...reviews, updatedReview])
+  function handleAddReview(newReview) {
+    setReviews([...reviews, newReview])
   }
 
   function handleDeleteReview(reviewId) {
@@ -41,14 +41,14 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
   }
 
   function handleEditReview(updatedReview) {
-    const newReview = reviews.map((review) => {
+    const newReviews = reviews.map((review) => {
       if (review.id === updatedReview.id) {
         return updatedReview
       } else {
         return review
       }
     })
-    setReviews(newReview)
+    setReviews(newReviews)
   }
   
   return (
