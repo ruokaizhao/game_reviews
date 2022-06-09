@@ -18,7 +18,7 @@ function Review({ review, userData, testUser, onDeleteReview, onEditReview }) {
 
   function handleComfirm() {
     const userInput = window.prompt("please enter your name to confirm:")
-    if (userInput === testUser.name) {
+    if (userInput === user) {
       handleDeleteClick()
     } else if (userInput === null) {
       return

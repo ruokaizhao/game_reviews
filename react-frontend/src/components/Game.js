@@ -13,7 +13,7 @@ function Game(props) {
       </Link>        
       <h4><em>From: {company}</em></h4>
       <h4><em>Price: ${price}</em></h4>
-      <Route path={`/reviews/:gameId`}>
+      <Route path="/reviews/:gameId">
         <ReviewList 
         name={name} 
         introduction={introduction} 

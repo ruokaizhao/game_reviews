@@ -57,7 +57,7 @@ function ReviewList({ game_id, name, introduction, img, testUser}) {
       <p className="introduction">{introduction}</p>
       <ul>
         {reviews.map((review) => {
-          return(
+          return (
             <li key={review.id}>
               <Review 
               review={review} 
